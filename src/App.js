@@ -27,16 +27,17 @@ function App() {
     setAccountId(account)
 
     if (accountId) {
-      const web3 = new Web3(ethereum)
+      const web3 = new Web3(Web3.givenProvider || ethereum)
       const balance = await web3.eth.getBalance(account)
+      const balanceEther = await web3.utils.fromWei(balance, 'ether')
 
-      setBalance(balance)
+      setBalance(balanceEther)
     }
   }
 
   useEffect(() => {
     getAccountInfo()
-  }, [])
+  }, [accountId])
 
   return (
     <div className='App'>
@@ -54,6 +55,7 @@ function App() {
           <div>Balance: {balance} Ether</div>
         </div>
       )}
+      {balance}
     </div>
   )
 }
