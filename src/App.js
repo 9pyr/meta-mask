@@ -37,6 +37,7 @@ function App() {
 
   useEffect(() => {
     getAccountInfo()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [accountId])
 
   return (
@@ -55,7 +56,6 @@ function App() {
           <div>Balance: {balance} Ether</div>
         </div>
       )}
-      {balance}
     </div>
   )
 }
