@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Web3 from 'web3'
 import './App.css'
 
@@ -34,7 +34,7 @@ function App() {
     }
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     getAccountInfo()
   }, [])
 
