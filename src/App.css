@@ -1,0 +1,49 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.App > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App .text {
+  margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 8px 10px;
+
+  border: none;
+  color: #f1f8ff;
+  background: #0070f3;
+  box-shadow: 0 4px 10px #0063d597;
+  border-radius: 10px;
+}
+.card {
+  color: #f1f8ff;
+  background: #0070f3;
+  padding: 10px;
+  box-shadow: 0 4px 10px #0063d597;
+  border-radius: 10px;
+}
+
+.card > div + div {
+  border-top: 1px solid #f1f8ff;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.card > div {
+  display: flex;
+  align-self: flex-start;
+  width: 100%;
+}
